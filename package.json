@@ -16,6 +16,31 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "amg-extesion",
+          "title": "AMG Extension",
+          "icon": "/assets/amg-logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "amg-extesion":[
+        {
+          "id": "amg-description",
+          "name": "Description"
+        }
+      ]
+    },
+
+    "viewsWelcome": [
+      {
+        "view": "amg-description",
+        "contents": "Welcome to AMG Extension.\n[View Repository](https://github.com/CassChris/amg-extension)\n To learn more about how to use AMG Extesion in VS Code [read our documentation](https://github.com/CassChris/amg-extension)."
+      }
+    ],
+
     "commands": [{
       "command": "amg-extension.helloWorld",
       "title": "Hello World"
@@ -35,6 +60,7 @@
       }
     ]
   },
+
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
