@@ -1,6 +1,6 @@
 {
     "generate controller": {
-        "prefix": "!amgcontroller",
+        "prefix": "!amg-controller",
         "body": [
         "public function ${1:functionExample}(Request \\$request)",
         "{",

@@ -1,6 +1,6 @@
 {
     "generate modal": {
-        "prefix": "!amgmodal",
+        "prefix": "!amg-modal",
         "body": [
             "<template>",
             "   <b-modal",
@@ -29,5 +29,141 @@
             "</script>"
         ],
         "description": "create amg modal vue"
-    }
+    },
+
+    "generate feather-icon": {
+        "prefix": "!amg-feather-icon",
+        "body": [
+          "<feather-icon",
+          "  icon=\"${1:FileIcon}\"",
+          "  size=\"16\"",
+          "  class=\"align-middle text-body cursor-pointer\"",
+          "  v-b-tooltip.hover.left=\"'${2:Tooltip}'\"",
+          "/>"
+        ],
+        "description": "create amg feather-icon"
+      },
+
+    "generate amg-icon": {
+        "prefix": "!amg-icon",
+        "body": [
+        "<amg-icon",
+        "  class=\"cursor-pointer mt-0 mr-0 bigger text-danger\"",
+        "  icon=\"${1:FilePdfIcon}\"",
+        "  v-b-tooltip.hover.left=\"'${2:Tooltip}'\"",
+        "  style=\"height: ${3:16}px; width: ${3:16}px\"",
+        "/>"
+        ],
+        "description": "create amg icon, view more icons in src/icons/icons.js"
+    },
+
+    "generate b-badge": {
+        "prefix": "!amg-badge",
+        "body": [
+        "<b-badge variant=\"${1: light-success}\" class=\"px-1\" pill>",
+        " {{ ${2:b-badge} }}",
+        "</b-badge>",
+        ],
+        "description": "create amg b-badge"
+    },
+
+    "generate b-badge with status": {
+        "prefix": "!amg-badge-with-status",
+        "body": [
+        "<b-badge v-if=\"${1:true}\" variant=\"light-danger\" class=\"px-1\" pill>",
+        "  status a",
+        "</b-badge>",
+        "<b-badge v-else-if=\"${2:false}\" variant=\"light-success\" class=\"px-1\" pill>",
+        "  status b",
+        "</b-badge>",
+        "<b-badge v-else variant=\"light-warning\" class=\"px-1\" pill>",
+        "  status c",
+        "</b-badge>"
+        ],
+        "description": "create amg b-badge with status"
+    },      
+
+        "generate b-dropdown": {
+          "prefix": "!amg-dropdown",
+          "body": [
+            "<b-dropdown",
+            "  variant=\"link\"",
+            "  no-caret",
+            "  class=\"mt-0\"",
+            "  boundary=\"viewport\"",
+            ">",
+            "  <template #button-content>",
+            "    <feather-icon",
+            "      icon=\"${1:SlidersIcon}\"",
+            "      size=\"16\"",
+            "      v-b-tooltip.hover.right=\"'${Tooltip}'\"",
+            "      class=\"align-middle\"",
+            "    />",
+            "  </template>",
+            "",
+            "  <b-dropdown-item",
+            "    v-b-tooltip.hover.left=\"'${2:Item1}'\"",
+            "    v-b-modal.modal-primary",
+            "  >",
+            "    <span class=\"align-middle ml-50\">${2:Item1} : text</span>",
+            "  </b-dropdown-item>",
+            "",
+            "",
+            "  <b-dropdown-item",
+            "    v-b-tooltip.hover.left=\"'${3:Item2}'\"",
+            "    v-b-modal.modal-primary",
+            "  >",
+            "    <span class=\"align-middle ml-50\">${3:Item2} : text</span>",
+            "  </b-dropdown-item>",
+            "",
+            "",
+            "  <b-dropdown-item",
+            "    v-b-tooltip.hover.left=\"'${3:Item3}'\"",
+            "    v-b-modal.modal-primary",
+            "  >",
+            "    <span class=\"align-middle ml-50\">${3:Item3} : text</span>",
+            "  </b-dropdown-item>",
+            "",
+            "</b-dropdown>",
+          ],
+          "description": "create amg b-dropdown"
+        },
+
+        "generate b-dropdown with icons": {
+            "prefix": "!amg-dropdown-with-icons",
+            "body": [
+            "<b-dropdown variant=\"link\" dropleft no-caret boundary=\"viewport\">",
+            "  <template #button-content>",
+            "    <feather-icon",
+            "      icon=\"${1:MoreVerticalIcon}\"",
+            "      size=\"16\"",
+            "      class=\"align-middle text-body\"",
+            "      v-b-tooltip.hover.left=\"'Actions'\"",
+            "    />",
+            "  </template>",
+            "",
+            "  <b-dropdown-item",
+            "    v-b-tooltip.hover.left=\"'${2:Item 1}'\"",
+            "    v-b-modal.modal-primary",
+            "  >",
+            "    <div class=\"text-danger\">",
+            "      <feather-icon icon=\"${3:CircleIcon}\" />",
+            "      <span class=\"align-middle ml-50\">${2:Item 1}</span>",
+            "    </div>",
+            "  </b-dropdown-item>",
+            "",
+            "  <b-dropdown-item",
+            "    v-b-tooltip.hover.left=\"'${4:Item 2}'\"",
+            "    v-b-modal.modal-primary",
+            "  >",
+            "    <feather-icon icon=\"${5:CircleIcon}\" />",
+            "    <span class=\"align-middle ml-50\">${4:Item 2}</span>",
+            "  </b-dropdown-item>",
+            "",
+            "</b-dropdown>"
+            ],
+            "description": "create amg b-dropdown with icons"
+        },          
+      
+    
 }
